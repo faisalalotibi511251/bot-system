@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const client = new Discord.Client();
-var antispam = require("discord-anti-spam");
+const antispam = require('discord-anti-spam');
 var prefix = "$"
 
 client.on('ready', () => {
