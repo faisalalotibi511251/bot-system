@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const prefix = "!";
 
 client.on('ready', () => {
-     client.user.setActivity(" !help -  JA ",{type: 'WATCHING'})
+     client.user.setActivity(" !help -  MS ",{type: 'WATCHING'})
 
 });
 
@@ -13,7 +13,7 @@ client.on("message", message => {
  if (message.content === "!help") {
   const embed = new Discord.RichEmbed()  
       .setColor("RANDOM") 
-      .setDescription(`Jikna System Bot | Help Menu :
+      .setDescription(`Myths System Bot | Help Menu :
 
 ${prefix}ban ⇏ خاصية الباند
 ${prefix}bc ⇏ خاصية البرودكاست
