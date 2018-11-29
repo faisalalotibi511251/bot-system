@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const prefix = "!";
 
 client.on('ready', () => {
-     client.user.setActivity(" !help - OBX 1,5k",{type: 'WATCHING'})
+     client.user.setActivity(" !help -  JA ",{type: 'WATCHING'})
 
 });
 
@@ -13,7 +13,7 @@ client.on("message", message => {
  if (message.content === "!help") {
   const embed = new Discord.RichEmbed()  
       .setColor("RANDOM") 
-      .setDescription(`OBX System Bot | Help Menu :
+      .setDescription(`Jikna System Bot | Help Menu :
 
 ${prefix}ban ⇏ خاصية الباند
 ${prefix}bc ⇏ خاصية البرودكاست
@@ -164,59 +164,7 @@ client.on('message', message => {
 });
 
 
-client.on('message', function(message) {
-	const myID = "195088897234042880";
-    let args = message.content.split(" ").slice(1).join(" ");
-    if(message.content.startsWith(prefix + "rename")) {
-		        if(message.author.id !== myID) return;
-            if(!args) return message.reply('.');
-        client.user.setUsername(args);
-        message.channel.send(':white_check_mark: , Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith(prefix + "st")) {
-		        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setGame(args , 'https://twitch.tv/OBX Comminty');
-        message.channel.send(':white_check_mark: , Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith(prefix + "playing")) {
-				        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setGame(args);
-        message.channel.send(':white_check_mark: , Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith(prefix + "listen")) {
-				        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setActivity(args, {type:'LISTENING'});
-        message.channel.send(':white_check_mark: , Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith(prefix + "watch")) {
-				        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setActivity(args, {type:'WATCHING'});
-        message.channel.send(':white_check_mark: , Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith(prefix + "setavatar")) {
-				        if(message.author.id !== myID) return;
-        client.user.setAvatar(args);
-        message.channel.send(':white_check_mark: , Done!').then(msg => {
-                if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    }
-});
+
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
