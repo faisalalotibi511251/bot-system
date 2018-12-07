@@ -13,7 +13,7 @@ const r1 = require('snekfetch');
 const jimp = require('jimp')
 const math = require('math-expression-evaluator'); 
 const child_process = require("child_process");
-const developers = ['290908670529896448'];
+const developers = ['472951521798127626'];
 const admin = ".";
 const prefix = ".";
 
@@ -26,7 +26,7 @@ client.on('ready', () => {
   console.log(`Servers : [ " ${client.guilds.size} " ]`);
   console.log(`Users : [ " ${client.users.size} " ]`);
   console.log(`Channels : [ " ${client.channels.size} " ]`);
-  console.log('By : '+`${client.users.get("290908670529896448").username}`)
+  console.log('By : '+`${client.users.get("472951521798127626").username}`)
    client.user.setActivity("You | .help",{type: 'WATCHING'})
    client.user.setStatus("dnd")
 });
@@ -63,7 +63,7 @@ if (message.content.startsWith(admin + 'setavatar')) {
 
 
    client.on('message', message => {
-        let guild = '468519385552650240';
+        let guild = '472951521798127626';
     if(message.content.includes('discord.gg')){
                                             if(!message.channel.guild) return;
         if (!message.member.hasPermissions(['ADMINISTRATOR'])){
